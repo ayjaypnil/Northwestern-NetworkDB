@@ -12,8 +12,17 @@ var PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.set("view engine", "ejs"); 
+
 app.get("/", function(req, res) {
   console.log("hit!!");
+});
+
+app.get("/home", function(req, res) {
+  res.render(
+    __dirname + "/assets/views/home.ejs",
+    { title: "Northwestern Bootcamp Network Home Page!" }
+  );
 });
 
 app.listen(PORT, function(err){
