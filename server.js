@@ -15,13 +15,22 @@ app.use(bodyParser.json());
 app.set("view engine", "ejs"); 
 
 app.get("/", function(req, res) {
-  console.log("hit!!");
+ res.render( __dirname + "/assets/views/home.ejs", { title: "Northwestern Bootcamp Network Home Page!" }
+  );
 });
 
 app.get("/home", function(req, res) {
-  res.render(
-    __dirname + "/assets/views/home.ejs",
-    { title: "Northwestern Bootcamp Network Home Page!" }
+  res.render( __dirname + "/assets/views/home.ejs", { title: "Northwestern Bootcamp Network Home Page!" }
+  );
+});
+
+app.get("/events", function(req, res) {
+  res.render( __dirname + "/assets/views/events.ejs", { events: "Northwestern Bootcamp Network Page!" }
+  );
+});
+
+app.get("/network", function(req, res) {
+  res.render( __dirname + "/assets/views/network.ejs", { network: "Northwestern Bootcamp Network Events Page!" }
   );
 });
 
