@@ -1,0 +1,19 @@
+h1{
+    color: purple;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+.img-responsive {
+    height: auto;
+    width: auto;
+    max-height: 65px;
+    max-width: 250px;
+}

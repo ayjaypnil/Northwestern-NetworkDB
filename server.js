@@ -14,23 +14,30 @@ app.use(bodyParser.json());
 
 app.set("view engine", "ejs"); 
 
+app.use(express.static("public"));
+
 app.get("/", function(req, res) {
- res.render( __dirname + "/assets/views/home.ejs", { title: "Northwestern Bootcamp Network Home Page!" }
-  );
+ res.render( __dirname + "/views/home.ejs");
 });
 
 app.get("/home", function(req, res) {
   res.render( __dirname + "/views/home.ejs");
 });
 
+app.get("/profile", function(req, res) {
+  res.render( __dirname + "/views/profile.ejs");
+});
+
 app.get("/events", function(req, res) {
-  res.render( __dirname + "/views/events.ejs", { events: "Northwestern Bootcamp Network Page!" }
-  );
+  res.render( __dirname + "/views/events.ejs");
 });
 
 app.get("/network", function(req, res) {
-  res.render( __dirname + "/views/network.ejs", { network: "Northwestern Bootcamp Network Events Page!" }
-  );
+  res.render( __dirname + "/views/network.ejs");
+});
+
+app.get("/jobs", function(req, res) {
+  res.render(__dirname + "/views/jobs.ejs");
 });
 
 app.listen(PORT, function(err){
