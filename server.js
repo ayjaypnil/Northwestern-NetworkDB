@@ -20,6 +20,10 @@ app.get("/", function(req, res) {
  res.render( __dirname + "/views/index.ejs");
 });
 
+app.get("/signup", function(req, res) {
+  res.render( __dirname + "/views/newusersignup.ejs");
+});
+
 app.get("/home", function(req, res) {
   res.render( __dirname + "/views/home.ejs");
 });
