@@ -25,5 +25,6 @@
     "express-session": "^1.15.6",
     "method-override": "^2.3.10",
     "mysql": "^2.15.0"
-  }
+  },
+  "devDependencies": {}
 }
