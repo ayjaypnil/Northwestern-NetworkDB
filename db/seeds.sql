@@ -1,4 +1,5 @@
-
+INSERT INTO users (email, password_hash, first_name, last_name, campus, grad_date, link) 
+VALUES ('ajpatel@u.northwestern.edu', 'password', 'Aj', 'Pnil', 'Evanston', '2018-04-22', 'https://ayjaypnil.github.io/');
 
 -- IGNORE BELOW!!
 
