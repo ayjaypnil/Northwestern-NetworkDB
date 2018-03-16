@@ -48,7 +48,7 @@ app.use(express.static("public"));
 // });
 
 app.get("/", function(req, res) {
- res.render( __dirname + "/views/index.ejs");
+ res.render( __dirname + "/views/home.ejs");
 });
 
 app.get("/signup", function(req, res) {

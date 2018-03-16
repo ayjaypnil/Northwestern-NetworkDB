@@ -1,17 +1,129 @@
 <%- include('partials/header') -%>
 <!-- Header until body tag -->
 
-    <body>
-        <!-- Materialize Navbar -->
-        <%- include('partials/navbar') -%>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-            <div class="container">
-                <h1>Home Page</h1>
-            </div>
+  <title>Northwestern Bootcamp Network</title>
 
-        <!-- Sticky Footer -->
-        <%- include('partials/footer') -%>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-    <!-- DO NOT TOUCH!!! -->
-    </body>
+  <!-- CSS File -->
+  <link type="text/css" rel="stylesheet" href="/css/style.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+
+</head>
+
+<body>
+  <nav class="purple darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <div id="logo-container"><img src="images/nu-boot.png" alt="logo" class="brand-logo"></div>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Login</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text text-lighten-2">Northwestern Coding Bootcamp Alumni Network</h1>
+        <div class="row center">
+          <h5 class="header col s12 white-text light">A social platform for past and present Northwestern Coding Bootcamp students </h5>
+        </div>
+        <div class="row center">
+          <a id="download-button" href="#" class="btn-large waves-effect waves-light purple darken-4 lighten-1">Register</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+     <div class="parallax"><img src="images/background1.jpg" alt="photo"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Creating Community</h5>
+
+            <p class="light">Currently, there is no readily available resource that allows current students and past Northwestern Coding Bootcamp alumni to get in contact with each other, as well as collaborate and participate in events tailored to current and past students. We aim to bridge this gap by providing the platform that will foster a vibrant community centered around keeping the Northwestern Bootcamp students connected.
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">event</i></h2>
+            <h5 class="center">Events</h5>
+
+            <p class="light">Stay in the know! Members have access to upcoming events pertinent to personal and professional development. See posts regarding, upcoming job fairs, coding club meetings, or just social gatherings to meet new people or reconnect with old chums!</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">school</i></h2>
+            <h5 class="center">Mentorship</h5>
+
+            <p class="light">Current bootcamp students have the option of obtaining an alumni mentor to help guide them through their chosen career path. They'll be matched with an alum that most closely matches their career aspirations. Through this relationship, students will gain valuable insight into what lies ahead and best practices for obtaining their goals.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 white-text light">We'd love to hear from you!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/background1.jpg" alt="NU background img 1"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <%- include('partials/footer') -%>
+  
+  <script src="js/app.js"></script>
+
+  </body>
 </html>
