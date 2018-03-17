@@ -75,6 +75,10 @@ app.get("/jobs", function(req, res) {
   res.render(__dirname + "/views/jobs.ejs");
 });
 
+app.get("/addjob", function(req, res) {
+  res.render(__dirname + "/views/addjob.ejs");
+});
+
 app.listen(PORT, function(err){
     if (err) throw err
     console.log("Listening on port: " + PORT);

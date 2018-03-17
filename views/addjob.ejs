@@ -1,0 +1,49 @@
+<%- include('partials/header') -%>
+    <!-- Header until body tag -->
+
+    <body>
+        <!-- Materialize Navbar -->
+        <%- include('partials/navbar') -%>
+        <div class="container">
+            <h1>Add New Job Listing</h1>
+        </div>
+
+        <div class="row">
+            <form class="col s12" id="create-update-job-form" action="/users/add" method="POST">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Title" id="new_job" type="text" class="validate">
+                        <label for="new_job">Job Title</label>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="input-field col s6">
+                        <textarea id="textarea2" class="materialize-textarea" data-length="136"></textarea>
+                        <label for="textarea2">Job Description (136 characters)</label>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="URL" id="job_link" type="text" class="validate">
+                        <label for="job_link">URL for more information</label>
+                    </div>
+                </div>
+                
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+
+            </form>
+        </div>
+
+        <script src="js/app.js"></script>
+
+         <!-- Sticky Footer -->
+         <%- include('partials/footer') -%>
+
+         <!-- DO NOT TOUCH!!! -->
+</body>
+
+</html>
