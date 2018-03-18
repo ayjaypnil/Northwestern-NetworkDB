@@ -54,10 +54,6 @@ app.get("/jobs", function(req, res) {
   res.render(__dirname + "/views/jobs.ejs");
 });
 
-<<<<<<< HEAD
-app.get("/addjob", function(req, res) {
-  res.render(__dirname + "/views/addjob.ejs");
-=======
 
 connection.connect(function(err) {
   if (err) {
@@ -74,7 +70,6 @@ connection.connect(function(err) {
           if (err) throw err;
       });
     });
->>>>>>> 4ed9860c1eed9ce8461e9612d20bf90ccee645e0
 });
 
 app.listen(PORT, function(err){
