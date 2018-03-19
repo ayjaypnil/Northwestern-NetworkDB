@@ -54,6 +54,10 @@ app.get("/jobs", function(req, res) {
   res.render(__dirname + "/views/jobs.ejs");
 });
 
+app.get("/addjob", function(req, res) {
+  console.log("at addjob.ejs");
+  res.render(__dirname + "/views/addjob.ejs");
+});
 
 connection.connect(function(err) {
   if (err) {
@@ -70,10 +74,35 @@ connection.connect(function(err) {
           if (err) throw err;
       });
     });
+
+  app.post('/add', function(req, res){
+
+    var new_job = (req.body);
+    
+    var html = "";
+
+    html += "<div class='col s6 m6'>"
+    html += "<div class='card blue-grey darken-1'>"
+    html += "<div class='card-content purple darken-4 white-text'>"
+    html += "<span class='card-title'>" + new_job.job_title+"</span>"
+    html += "<p>"+ new_job.job_desc+"</p></div>"
+    html += "<div class='card-action grey darken-2'>"
+    html += "<a href="+ new_job.job_URL+" target='_blank'>Click here for more information!</a>"
+    html += "</div></div></div>"
+    
+    res.send(html);
+
+
+    var query = "INSERT INTO jobs (job_title, job_desc, job_URL) VALUES (?, ?, ?)"
+                  connection.query(query, [new_job.job_title, new_job.job_desc, new_job.job_URL], function(err, response){
+                      if (err) throw err;
+                  })
+    //console.log(new_job);
+  });
 });
+
 
 app.listen(PORT, function(err){
     if (err) throw err
     console.log("Listening on port: " + PORT);
 });
-
